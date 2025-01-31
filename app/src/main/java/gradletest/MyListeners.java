@@ -24,6 +24,7 @@ public class MyListeners extends ListenerAdapter {
 
        //Functionality
        if(content.equals("!ping")){
+           MessageChannel channel = event.getChannel(); 
            channel.sendMessage("Pong!").queue(); //.queue() is important to use after sendMessage()
        }
    }
