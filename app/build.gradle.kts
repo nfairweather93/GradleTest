@@ -8,7 +8,10 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+     id("com.gradleup.shadow") version "8.3.1"
 }
+
+val jdaVersion = "5.2.3"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -23,6 +26,19 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    //Added by me
+    implementation("net.dv8tion:JDA:$jdaVersion")
+    implementation("io.github.cdimascio:dotenv-java:3.1.0")
+}
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
+    options.isIncremental = true
+
+    // Set this to the version of java you want to use,
+    // the minimum required for JDA is 1.8
+    sourceCompatibility = "1.8"
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
