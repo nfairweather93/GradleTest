@@ -8,7 +8,7 @@ import net.dv8tion;
 public class MyListeners extends ListenerAdapter {
    public static void main(String[] arguments) throws LoginException, InterruptedException
    {
-        JDA api = JDABuilder.createDefault(arguments[0]).addEventListeners(new PingPongBot()).build().awaitReady();
+        //JDA api = JDABuilder.createDefault(arguments[0]).addEventListeners(new PingPongBot()).build().awaitReady();
    }
 
 

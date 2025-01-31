@@ -3,7 +3,7 @@ package gradletest;
 
 import net.dv8tion;
 
-public class App extends ListenerAdapter{
+public class App {
    
     public static void main(String[] args) throws Exception
     {
