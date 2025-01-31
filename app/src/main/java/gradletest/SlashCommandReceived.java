@@ -17,11 +17,6 @@ public class SlashCommandReceived extends ListenerAdapter{
         if(event.getMember().getUser().isBot()) return;
 
         if(event.getName().equalsIgnoreCase("ping")){
-                try {
-                    event.wait(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
                 event.reply("Pong!").setEphemeral(false).queue();
             }
         }
