@@ -13,24 +13,8 @@ public class App extends ListenerAdapter{
 
         //Set up the api with the bot
         JDA api = JDABuilder.createDefault(BOT_TOKEN).build();
-    }
 
-
-    @Override
-    public void onMessageReceived(MessageReceivedEvent event)
-    {
-        //Ignore messages from other bots
-        if(event.getAuthor().isBot()) return;
-
-        //Variables
-        Message message = event.getMessage();
-        String content = message.getContentRaw();
-
-        //Functionality
-        if(content.equals("!ping")){
-            channel.sendMessage("Pong!").queue(); //.queue() is important to use after sendMessage()
-        }
-
-
+        //Register Listener
+        JDABuilder.addEventListeners(new MyListeners());
     }
 }
