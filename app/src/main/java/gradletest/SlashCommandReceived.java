@@ -18,6 +18,8 @@ public class SlashCommandReceived extends ListenerAdapter{
 
         if(event.getName().equalsIgnoreCase("ping")){
                 event.reply("Pong!").setEphemeral(false).queue();
-            }
+        }else if(event.getName().equalsIgnoreCase("pong")){
+            event.reply("Ping!").setEphemeral(false).queue();
+        }
         }
     }
