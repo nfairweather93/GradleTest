@@ -25,7 +25,8 @@ public class App {
         api.addEventListener(new SlashCommandReceived());
 
         //Slash commands
-        api.upsertCommand("pong", "Pongs the bot and it will return \"Ping!\"").queue();;
+        api.upsertCommand("pong", "Pongs the bot and it will return \"Ping!\"").queue();
+        api.upsertCommand("pang", "Pang da bot").queue();
         api.upsertCommand("ping", "Pings the bot and it will return \"Pong!\"").queue();
         //.addOption(OptionType.STRING, "name", "The name you want to ping", true); //Last value is requirement boolean
     }
